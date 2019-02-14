@@ -30,6 +30,12 @@ export default {
           title: '哈尔滨冰雪大世界',
           desc: '想成为冰雪奇缘里的公主吗？',
           imgUrl: 'http://img1.qunarzz.com/sight/p0/1812/18/18e166d74daa0d21a3.water.jpg_200x200_499cd5db.jpg'
+        },
+        {
+          id: '0003',
+          title: '哈尔滨冰雪大世界',
+          desc: '想成为冰雪奇缘里的公主吗？',
+          imgUrl: 'http://img1.qunarzz.com/sight/p0/1812/18/18e166d74daa0d21a3.water.jpg_200x200_499cd5db.jpg'
         }
       ]
     }
