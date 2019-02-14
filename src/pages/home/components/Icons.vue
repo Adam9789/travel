@@ -90,33 +90,35 @@ export default {
 .icons >>> .swiper-container
   height 0
   padding-bottom 58%
-.icon
-  position relative
-  width 25%
-  padding-bottom 25%
-  float left
-  .icon-img
-    position absolute
-    top 0
-    left 0
-    right 0
-    bottom .44rem
-    box-sizing border-box
-    padding .1rem
-    .icon-imgcontent
-      margin 0 auto
-      display block
-      height 100%
-  .icon-desc
-    position absolute
-    bottom 0
-    left 0
-    right 0
-    line-height .44rem
-    height .44rem
-    text-align center
-    color #333
-    overflow hidden
-    text-overflow ellipsis
-    white-space nowrap
+.icons
+  margin-top .2rem
+  .icon
+    position relative
+    width 25%
+    padding-bottom 25%
+    float left
+    .icon-img
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom .44rem
+        box-sizing border-box
+        padding .1rem
+        .icon-imgcontent
+          margin 0 auto
+          display block
+          height 100%
+    .icon-desc
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        line-height .44rem
+        height .44rem
+        text-align center
+        color #333
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
 </style>
