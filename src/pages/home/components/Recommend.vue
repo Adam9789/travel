@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item in list" :key="item.id">
                     <img class="item-img" :src="item.imgUrl" alt="">
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -16,29 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          title: '哈尔滨冰雪大世界',
-          desc: '想成为冰雪奇缘里的公主吗？',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1812/18/18e166d74daa0d21a3.water.jpg_200x200_499cd5db.jpg'
-        },
-        {
-          id: '0002',
-          title: '哈尔滨冰雪大世界',
-          desc: '想成为冰雪奇缘里的公主吗？',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1812/18/18e166d74daa0d21a3.water.jpg_200x200_499cd5db.jpg'
-        },
-        {
-          id: '0003',
-          title: '哈尔滨冰雪大世界',
-          desc: '想成为冰雪奇缘里的公主吗？',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1812/18/18e166d74daa0d21a3.water.jpg_200x200_499cd5db.jpg'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

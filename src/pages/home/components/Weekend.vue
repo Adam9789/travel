@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">周末去哪</div>
         <ul>
-            <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item in list" :key="item.id">
                     <div class="item-img-wrapper">
                         <img class="item-img" :src="item.imgUrl" alt="">
                     </div>
@@ -17,23 +17,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          title: '哈尔滨温泉',
-          desc: '这里是温泉旅行的好去处，设施最新，服务贴心，是最适合全家度假休闲的好去处',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1812/89/17a0bd303e45e0.jpg_r_640x214_8f7a2a88.jpg'
-        },
-        {
-          id: '0002',
-          title: '哈尔滨必游',
-          desc: '冰雪之冠，富有异国情调的美丽都市',
-          imgUrl: 'http://img1.qunarzz.com/sight/source/1505/e3/e9761259adfc1d.jpg_r_640x214_21b96532.jpg'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
