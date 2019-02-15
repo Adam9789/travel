@@ -1,17 +1,16 @@
 <template>
     <div class="header">
-        <ul class="list">
-          <li class="item">A</li>
-          <li class="item">A</li>
-          <li class="item">A</li>
-          <li class="item">A</li>
-          <li class="item">A</li>
+        <ul class="list" >
+          <li class="item" v-for="(item,key) in cities" :key="key">{{key}}</li>
         </ul>
     </div>
 </template>
 <script>
 export default {
-  name: 'CityHeaderAlphabet'
+  name: 'CityHeaderAlphabet',
+  props: {
+    cities: Object
+  }
 }
 </script>
 <style lang="stylus" scoped>
