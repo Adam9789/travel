@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="area" v-for="(item ,key) in cities" :key="key">
+            <div class="area" v-for="(item ,key) in cities" :key="key" :ref="key">
                 <div class="title border-topbottom">{{key}}</div>
                 <div class="item-list">
                     <div class="item border-bottom" v-for="InnerItem in item" :key="InnerItem.id">{{InnerItem.name}}</div>
@@ -32,10 +32,20 @@ export default {
   name: 'CityList',
   props: {
     hot: Array,
-    cities: Object
+    cities: Object,
+    letter: String
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  // 用watch监听letter变化，一旦变了用BScoll提供的方法跳到某个元素
+  watch: {
+    letter () {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
